@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://samples.msdn.microsoft.com/workshop/samples/svg/zoomAndPan/panning.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>SVG Panning</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=9">  <!-- For intranet rendering only, remove when page is placed in production! -->
+  <script>   
+    /* Constants: */
+    var leftArrow  = 37;	// Key code for the left arrow key.
+    var upArrow    = 38;
+    var rightArrow = 39;
+    var downArrow  = 40;
+    var panRate    = 10;	// Number of pixels to pan per key press.
+    
+    /* Global variables: */
+    var theSvgElement;
+    
+    function processKeyPress(evt)
+    {
+      var viewBox = theSvgElement.getAttribute('viewBox');	// Grab the object representing the SVG element's viewBox attribute.
+      var viewBoxValues = viewBox.split(' ');				// Create an array and insert each individual view box attribute value (assume they're seperated by a single whitespace character).
+      
+      /* The array is filled with strings, convert the first two viewBox values to floats: */
+      viewBoxValues[0] = parseFloat(viewBoxValues[0]);	// Represent the x-coordinate on the viewBox attribute.
+      viewBoxValues[1] = parseFloat(viewBoxValues[1]);	// Represent the y coordinate on the viewBox attribute.
+      
+      switch (evt.keyCode)
+      {
+        case leftArrow:
+          viewBoxValues[0] += panRate;	// Increase the x-coordinate value of the viewBox attribute by the amount given by panRate.
+          break;
+        case rightArrow:
+          viewBoxValues[0] -= panRate;	// Decrease the x-coordinate value of the viewBox attribute by the amount given by panRate.
+          break;
+        case upArrow:
+          viewBoxValues[1] += panRate;	// Increase the y-coordinate value of the viewBox attribute by the amount given by panRate.          break;          
+          break;
+        case downArrow:
+          viewBoxValues[1] -= panRate;	// Decrease the y-coordinate value of the viewBox attribute by the amount given by panRate.          break;          
+          break;               
+      } // switch
+      
+      theSvgElement.setAttribute('viewBox', viewBoxValues.join(' '));	// Convert the viewBoxValues array into a string with a white space character between the given values.
+    }
+    
+    function initialize()
+    {
+      /* Set the global variable and detect if the browser supports SVG:  */
+      theSvgElement = document.getElementById('svgElement');			// Best to only access the SVG element after the page has fully loaded.
+      
+      if(theSvgElement.namespaceURI != "http://www.w3.org/2000/svg")	// Alert the user if their browser does not support SVG.
+        alert("Inline SVG in HTML5 is not supported. This document requires a browser that supports HTML5 inline SVG.");      
+      
+      /* Add event listeners:  */
+      window.addEventListener('keydown', processKeyPress, true);      
+    }
+  </script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body onload="initialize();">
+  <div style=" margin-bottom: 8px;">
+    <strong>Use the arrow keys to pan.</strong>
+  </div>
+  
+  <svg id="svgElement" currentscale="1" width="800px" height="600px" viewBox="-30 -20 800 600">  <!-- The viewBox attribute resolves a zooming issue. -->
+    <circle cx="85" cy="50" r="50" style="fill: blue;"></circle>
+  </svg>
+
+
+</body></html>

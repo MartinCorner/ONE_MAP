@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>SVG Box Test</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+	<style>
+		#svg-board{border: #777 solid 1px;}
+		
+	</style>
+	<script>
+		
+      window.addEventListener('keydown', processKeyPress, true);    
+		function processKeyPress(e){
+			console.log(e.keyCode);
+		}
+	</script>
+</head>
+
+<body>
+	<div id="viewport">
+		<div id="screen">
+			
+		  <object id="svg-board" data="login.svg" width="302px" height="302px" type="image/svg+xml">
+		  </object>
+		</div>
+	</div>
+
+</body>
+
+</html>
