@@ -11,6 +11,8 @@
     var upArrow          = 38;
     var rightArrow       = 39;
     var downArrow        = 40;
+    var zoomInArrow		 = 187;
+    var zoomOutArrow	 = 189;
     var panRate          = 10;	// Number of pixels to pan per key press.    
     var zoomRate         = 1.1;	// Must be greater than 1. Increase this value for faster zooming (i.e., less granularity).
 
@@ -19,6 +21,7 @@
     
     function processKeyPress(evt)
     {
+		console.log(evt.keyCode);
       var viewBox = theSvgElement.getAttribute('viewBox');	// Grab the object representing the SVG element's viewBox attribute.
       var viewBoxValues = viewBox.split(' ');				// Create an array and insert each individual view box attribute value (assume they're seperated by a single whitespace character).
 
@@ -38,7 +41,13 @@
           break;
         case downArrow:
           viewBoxValues[1] -= panRate;	// Decrease the y-coordinate value of the viewBox attribute to pan up.      
-          break;                         
+          break;   
+	    case zoomInArrow:
+		  zoom('zoomIn');
+		  break;   
+	    case zoomOutArrow:
+		  zoom('zoomOut');
+		  break;   
       } // switch
       
       theSvgElement.setAttribute('viewBox', viewBoxValues.join(' '));	// Convert the viewBoxValues array into a string with a white space character between the given values.
