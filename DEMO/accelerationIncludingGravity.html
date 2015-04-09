@@ -33,18 +33,53 @@
 		var z = event.accelerationIncludingGravity.z;
 		var accX = Math.round(event.accelerationIncludingGravity.x*10) / 10;  
     	var accY = Math.round(event.accelerationIncludingGravity.y*10) / 10; 
+		if(window.navigator.userAgent.match(/Android/)){
+			accX = -accX;
+			accY = -accY;
+		}
 //		console.log(x);
 //		console.log(y);
 //		console.log(z);
-		
-		document.getElementById("ball").style.webkitTransform = 'translate('+(-accX*10)+'px,'+(accY*10)+'px)';
-		document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
+		switch(window.orientation){
+				case 0:
+					document.getElementById("ball").style.webkitTransform = 'translate('+(accX*10)+'px,'+(-accY*10)+'px)';
+					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
+				break;
+				case -90:
+					document.getElementById("ball").style.webkitTransform = 'translate('+(accY*10)+'px,'+(accX*10)+'px)';
+					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
+				break;
+				case 90:
+					document.getElementById("ball").style.webkitTransform = 'translate('+(-accY*10)+'px,'+(-accX*10)+'px)';
+					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
+				break;
+				case 180:
+					document.getElementById("ball").style.webkitTransform = 'translate('+(-accX*10)+'px,'+(accY*10)+'px)';
+					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
+				break;
+		}
 		
 	}
+//	window.compassneedscalibration = function(event){
+//		console.log(event);
+//	}
+	window.addEventListener("compassneedscalibration", function(event) {
+//		console.log(event);
+	}, true);
+	
+	window.addEventListener("deviceorientation", function(event) {
+//		console.log(event.alpha);
+	}, true);
+		
+		function updateOrientation(){
+			switch(window.orientation){
+				
+			}
+		}
 	</script>
 </head>
 
-<body>
+<body onorientationchange="updateOrientation();">
 	
 	<div class="ball ball-4" id="ball"><div class="circle" id="circle"></div></div>
 </body>
