@@ -41,22 +41,29 @@
 //		console.log(y);
 //		console.log(z);
 		switch(window.orientation){
-				case 0:
-					document.getElementById("ball").style.webkitTransform = 'translate('+(accX*10)+'px,'+(-accY*10)+'px)';
-					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
-				break;
-				case -90:
-					document.getElementById("ball").style.webkitTransform = 'translate('+(accY*10)+'px,'+(accX*10)+'px)';
-					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
-				break;
-				case 90:
-					document.getElementById("ball").style.webkitTransform = 'translate('+(-accY*10)+'px,'+(-accX*10)+'px)';
-					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
-				break;
-				case 180:
-					document.getElementById("ball").style.webkitTransform = 'translate('+(-accX*10)+'px,'+(accY*10)+'px)';
-					document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
-				break;
+			case 0:
+				document.getElementById("ball").style.webkitTransform = 'translate('+(accX*10)+'px,'+(-accY*10)+'px)';
+			break;
+			case -90:
+				document.getElementById("ball").style.webkitTransform = 'translate('+(accY*10)+'px,'+(accX*10)+'px)';
+			break;
+			case 90:
+				document.getElementById("ball").style.webkitTransform = 'translate('+(-accY*10)+'px,'+(-accX*10)+'px)';
+			break;
+			case 180:
+				document.getElementById("ball").style.webkitTransform = 'translate('+(-accX*10)+'px,'+(accY*10)+'px)';
+			break;
+		}
+		if(Math.abs(accX) > Math.abs(accY)){
+			if(Math.abs(accX) > 0)
+				document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accX*50)+'deg)';
+			else
+				document.getElementById("circle").style.webkitTransform = 'rotateZ(-'+(accX*50)+'deg)';
+		}else{
+			if(Math.abs(accY) > 0)
+				document.getElementById("circle").style.webkitTransform = 'rotateZ('+(accY*50)+'deg)';
+			else
+				document.getElementById("circle").style.webkitTransform = 'rotateZ(-'+(accY*50)+'deg)';
 		}
 		
 	}
