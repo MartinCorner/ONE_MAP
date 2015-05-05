@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>SpryMap | candrews.net</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script type="text/javascript" src="scripts/spryMap-2.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var map = new SpryMap({
+                id: "worldMap",
+                height: 400,
+                width: 800,
+                startX: 200,
+                startY: 200,
+                cssClass: "mappy"
+            });
+        }
+
+        function zoom(zoomType) {
+            var mapWidth = parseInt(document.getElementById('worldMap').style.width);
+            switch (zoomType) {
+            case "zoomIn":
+                mapWidth += 50;
+                break;
+            case "zoomOut":
+                if (mapWidth > 100) mapWidth -= 50;
+                break;
+            }
+            document.getElementById('worldMap').style.width = mapWidth + "%";
+        }
+
+        function zoomViaMouseWheel(mouseWheelEvent) {
+            if (mouseWheelEvent.wheelDelta > 0)
+                zoom('zoomIn');
+            else
+                zoom('zoomOut');
+
+            /* When the mouse is over the webpage, don't let the mouse wheel scroll the entire webpage: */
+            mouseWheelEvent.cancelBubble = true;
+            return false;
+        }
+        window.addEventListener('mousewheel', zoomViaMouseWheel, false);
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <img id="worldMap" style="width:100%" src="map/22.svg" alt="A map of the world." />
+        <!--        <object data="map/22.svg"></object>-->
+        <!--        <embed *src="map/22.svg">-->
+        <!--        <iframe id="worldMap" src="map/22.svg"></iframe>-->
+    </div>
+    <button type="button" onclick="zoom(&#39;zoomIn&#39;);">Zoom In</button>
+    <button type="button" onclick="zoom(&#39;zoomOut&#39;);">Zoom Out</button>
+</body>
+
+</html>

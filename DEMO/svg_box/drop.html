@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #box{
+                width: 100px;
+                height: 100px;
+                background-color: #ccc;
+            }
+        </style>
+        <script>
+            var $ = function(selector){
+                return document.querySelectorAll(selector)[0];
+            }
+            window.onload = function(){
+                $('#box').addEventListener('ondragstart', drag(event));
+                $('body').addEventListener('ondrop', drop(event));
+                function drag(event){
+                    event.dataTransfer.setData("Text",event.target.id);
+                    console.log(event);
+                }
+                function drop(event){
+                    event.preventDefault();
+                    var data=event.dataTransfer.getData("Text");
+                    event.target.appendChild(document.getElementById(data));
+                    console.log(event);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="box" draggable="true"></div>
+    </body>
+</html>
+     
