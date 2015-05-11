@@ -38,3 +38,9 @@ div.content h3 a {
 .mappy {
     border: 8px solid #C1D9F7;
 }
+#pointer{
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border: 3px red solid;
+}

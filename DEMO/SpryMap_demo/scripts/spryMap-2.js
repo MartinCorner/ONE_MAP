@@ -106,7 +106,8 @@ function SpryMap(param) {
     m.viewingBox.style.width = m.width + "px";
     m.viewingBox.style.height = m.height + "px";
     m.viewingBox.style.position = "relative";
-    m.map.style.position = "absolute";
+    m.map.style.position = "relative";
+    m.map.style.display = "block";
     MoveMap(typeof param.startX == "undefined" ? 0 : -param.startX, typeof param.startY == "undefined" ? 0 : -param.startY);
 
     /**

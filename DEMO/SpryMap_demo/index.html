@@ -16,19 +16,74 @@
                 cssClass: "mappy"
             });
         }
-
+        var mousePos,
+            clientPos={},
+            zoomPos={};
         function zoom(zoomType) {
             var mapWidth = parseInt(document.getElementById('worldMap').style.width);
+            var offset_Left = 0;
+            var offset_Top = 0;
             switch (zoomType) {
-            case "zoomIn":
-                mapWidth += 50;
+                case "zoomIn":
+                    mapWidth += 50;
+                    document.getElementById('worldMap').style.left = '-'+(zoomPos.x/2) + "px";
+                    document.getElementById('worldMap').style.top = '-'+(zoomPos.y/2) + "px";
                 break;
-            case "zoomOut":
-                if (mapWidth > 100) mapWidth -= 50;
+                case "zoomOut":
+                    if (mapWidth > 100){
+                        mapWidth -= 50;
+                        document.getElementById('worldMap').style.left = "0px";
+                        document.getElementById('worldMap').style.top = "0px";
+                    }else if (mapWidth > 150){
+                        mapWidth -= 50;
+                        document.getElementById('worldMap').style.left = '-'+(mousePos.x/2) + "px";
+                        document.getElementById('worldMap').style.top = '-'+(mousePos.y/2) + "px";
+                    }
                 break;
             }
             document.getElementById('worldMap').style.width = mapWidth + "%";
         }
+
+        function mouseMove(ev){
+            ev= ev || window.event;
+            mousePos = mouseCoords(ev);
+            
+            clientPos.x = parseInt(document.getElementById('worldMap').clientWidth)/2+ getLeft(document.getElementById('worldMap'));;
+            clientPos.y = parseInt(document.getElementById('worldMap').clientHeight)/2+ getTop(document.getElementById('worldMap'));;
+            
+            zoomPos.x = (mousePos.x + clientPos.x)/2;
+            zoomPos.y = (mousePos.y + clientPos.y)/2;
+            document.getElementById('pointer').style.left = zoomPos.x + "px";
+            document.getElementById('pointer').style.top = zoomPos.y + "px";
+            
+            
+            mousePos.x -= getLeft(document.getElementById('worldMap'));
+            mousePos.y -= getTop(document.getElementById('worldMap'));
+            document.getElementById('mouse_x').innerHTML=mousePos.x;
+            document.getElementById('mouse_y').innerHTML=mousePos.y;
+        }
+        var getLeft=function(obj){
+            var offset=obj.offsetLeft;
+            if(obj.offsetParent!=null) offset +=getLeft(obj.offsetParent);
+            return offset;
+        };
+        var getTop=function(obj){
+            var offset=obj.offsetTop;
+            if(obj.offsetParent!=null) offset +=getTop(obj.offsetParent);
+            return offset;
+        };
+
+        function mouseCoords(ev){
+            if(ev.pageX || ev.pageY){
+                return {x:ev.pageX, y:ev.pageY};
+            } 
+            return {
+                x:ev.clientX + document.body.scrollLeft - document.body.clientLeft, 
+                y:ev.clientY + document.body.scrollTop - document.body.clientTop 
+            }; 
+        } 
+
+        document.onmousemove = mouseMove; 
 
         function zoomViaMouseWheel(mouseWheelEvent) {
             if (mouseWheelEvent.wheelDelta > 0)
@@ -53,6 +108,9 @@
     </div>
     <button type="button" onclick="zoom(&#39;zoomIn&#39;);">Zoom In</button>
     <button type="button" onclick="zoom(&#39;zoomOut&#39;);">Zoom Out</button>
+    <span id="mouse_x"></span>
+    <span id="mouse_y"></span>
+    <div id="pointer"></div>
 </body>
 
 </html>
