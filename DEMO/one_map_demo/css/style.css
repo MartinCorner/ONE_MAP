@@ -1,0 +1,48 @@
+header,
+main,
+footer {
+    padding-left: 240px;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+a.button-collapse {
+  line-height: 122px;
+  position: relative;
+  left: 50px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+a.button-collapse .mdi-navigation-menu {
+    font-size: 32px;
+}
+
+.head-container{
+    padding: 0 !important;
+}
+.head-container > div{
+    background-image: url(../images/bg-1.png);
+    background-size: cover;
+    height: 160px;
+}
+.head-container > div > span{
+    display: block;
+    width: 78px;
+    height: 78px;
+    border-radius: 500px;
+    border: 1px #ccc solid;
+    margin: 0 auto;
+    position: relative;
+    top: 40px;
+    overflow: hidden;
+}
+.head-container > div > span > img{
+    width: 100%;
+}
