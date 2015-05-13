@@ -115,11 +115,20 @@ function SpryMap(param) {
      * Description: Function called every time that the mouse moves
      */
     var MouseMove = function (b) {
+//        console.log('mouse');
         var e = b.clientX - m.mousePosition.x + parseInt(m.map.style.left),
             d = b.clientY - m.mousePosition.y + parseInt(m.map.style.top);
         MoveMap(e, d);
         m.mousePosition.x = b.clientX;
         m.mousePosition.y = b.clientY
+    };
+    var TouchMove = function (b) {
+//        console.log('touch');
+        var e = b.changedTouches[0].clientX - m.mousePosition.x + parseInt(m.map.style.left),
+            d = b.changedTouches[0].clientY - m.mousePosition.y + parseInt(m.map.style.top);
+        MoveMap(e, d);
+        m.mousePosition.x = b.changedTouches[0].clientX;
+        m.mousePosition.y = b.changedTouches[0].clientY;
     };
 
     /**
@@ -157,7 +166,206 @@ function SpryMap(param) {
             ++m.timerCount;
         }
     };
+    
+    window.$ = function (selector)
+        {
+            return document.querySelectorAll(selector)[0];
+        };
+    
+    var moved = false;
 
+    var shouldCatch = false;
+    
+    var ifFirstPointerDown = function (event, action)
+            {
+                if (event.touches.length == 1)
+                {
+                    action(event);
+                }
+            };
+
+        var ifLastPointerUp = function (event, action)
+            {
+                if (event.touches.length == 0)
+                {
+                    action(event);
+                }
+            };
+    $.containsClassName = function (element, className)
+            {
+
+                if (element.className)
+                {
+
+                    var classNames = element.className.split(" ");
+
+                    return (classNames.indexOf(className) != -1);
+                    
+                }
+                else
+                {
+                    return false;
+                }
+
+            };
+
+    document.addEventListener("touchstart",
+        function (event) {
+
+            ifFirstPointerDown(event, function (event) {
+
+                var found = false;
+
+                var element = event.srcElement;
+                while (element && (!found)) {
+
+                    if ($.containsClassName(element, "native-touches")) {
+                        found = true;
+                    }
+
+                    element = element.parentNode;
+                }
+
+                if (!found) {
+
+                    moved = false;
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    shouldCatch = true;
+
+                }
+
+            });
+
+        });
+
+    document.addEventListener("touchmove",
+        function (event) {
+
+            if (shouldCatch) {
+
+                moved = true;
+
+                event.preventDefault();
+                event.stopPropagation();
+
+            }
+
+        });
+
+    document.addEventListener("touchend",
+        function (event) {
+
+            ifLastPointerUp(event, function (event) {
+
+                if (shouldCatch) {
+
+                    if (!moved) {
+
+                        var point = event.changedTouches[0];
+                        var target = event.target;
+                        while (target.nodeType != Node.ELEMENT_NODE) {
+                            target = target.parentNode;
+                        }
+
+                        var mouseEvent = document.createEvent('MouseEvents');
+
+                        mouseEvent.initMouseEvent("click", true, true, document.defaultView, 0,
+                            point.screenX, point.screenY, point.clientX, point.clientY,
+                            false, false, false, false, 0, null);
+
+                        mouseEvent.preventDefault();
+
+                        target.dispatchEvent(mouseEvent);
+
+                    }
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                }
+
+                shouldCatch = false;
+
+            });
+
+        });
+
+    document.addEventListener("touchcancel",
+        function (event) {
+
+            ifLastPointerUp(event, function (event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                shouldCatch = false;
+
+            });
+
+        });
+
+    /**
+     * touchstart event handler
+     */
+    AddListener(m.viewingBox, "touchstart", function (e) {
+        m.viewingBox.style.cursor = m.dragCursor;
+
+        // Save the current mouse position so we can later find how far the
+        // mouse has moved in order to scroll that distance
+        m.mousePosition.x = e.changedTouches[0].clientX;
+        m.mousePosition.y = e.changedTouches[0].clientY;
+
+        // Start paying attention to when the mouse moves
+        AddListener(document, "touchmove", TouchMove);
+        m.mouseDown = true;
+
+        // If the map is set to continue scrolling after the mouse is released,
+        // start a timer for that animation
+        if(m.scrolling) {
+            m.timerCount = 0;
+
+            if(m.timerId != 0)
+            {
+                clearInterval(m.timerId);
+                m.timerId = 0;
+            }
+            
+            m.timerId = setInterval(OnScrollTimer, 20);
+        }
+        
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    });
+
+
+    /**
+     * touchend event handler
+     */    
+    AddListener(document, "touchend", function () {
+        if(m.mouseDown) {
+            var handler = TouchMove;
+            if(document.detachEvent) {
+                document.detachEvent("ontouchmove", document["mousemove" + handler]);
+                document["mousemove" + handler] = null;
+            } else {
+                document.removeEventListener("touchmove", handler, false);
+            }
+            
+            m.mouseDown = false;
+            
+            if(m.mouseLocations.length > 0) {
+                var clickCount = m.mouseLocations.length;
+                m.velocity.x = (m.mouseLocations[clickCount - 1].x - m.mouseLocations[0].x) / clickCount;
+                m.velocity.y = (m.mouseLocations[clickCount - 1].y - m.mouseLocations[0].y) / clickCount;
+                m.mouseLocations.length = 0;
+            }
+        }
+        
+        m.viewingBox.style.cursor = m.hoverCursor;
+    });
+    
     /**
      * mousedown event handler
      */
@@ -189,7 +397,6 @@ function SpryMap(param) {
         
         event.preventDefault ? event.preventDefault() : event.returnValue = false;
     });
-
     /**
      * mouseup event handler
      */
@@ -215,4 +422,5 @@ function SpryMap(param) {
         
         m.viewingBox.style.cursor = m.hoverCursor;
     });
-};
+    
+};;
