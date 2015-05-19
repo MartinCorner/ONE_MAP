@@ -48,8 +48,8 @@
             ev= ev || window.event;
             mousePos = mouseCoords(ev);
             
-            clientPos.x = parseInt(document.getElementById('worldMap').clientWidth)/2+ getLeft(document.getElementById('worldMap'));;
-            clientPos.y = parseInt(document.getElementById('worldMap').clientHeight)/2+ getTop(document.getElementById('worldMap'));;
+            clientPos.x = parseInt(document.getElementById('worldMap').clientWidth)/2+ getLeft(document.getElementById('worldMap'));
+            clientPos.y = parseInt(document.getElementById('worldMap').clientHeight)/2+ getTop(document.getElementById('worldMap'));
             
             zoomPos.x = (mousePos.x + clientPos.x)/2;
             zoomPos.y = (mousePos.y + clientPos.y)/2;
