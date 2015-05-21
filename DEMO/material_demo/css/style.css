@@ -46,3 +46,26 @@ a.button-collapse .mdi-navigation-menu {
 .head-container > div > span > img{
     width: 100%;
 }
+
+
+#floating-action-button.btn {
+    margin: 20px;
+    border-radius: 100%;
+    padding: 15px;
+    font-size: 26px;
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+#floating-action-button h2 {
+    padding: 14px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+.btn.btn-fab i{
+    position: relative;
+    top: -5px;
+}

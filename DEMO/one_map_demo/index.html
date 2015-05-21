@@ -1,39 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
-
-    <link href="css/materialize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script>
-    </script>
+    <title>SpryMap</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script type="text/javascript" src="scripts/spryMap-2.js"></script>
+    
 </head>
 
 <body>
+    <div class="content">
+        <img id="worldMap" style="width:100%" src="map/NatGeo17.jpg" alt="A map of the world." />
+    </div>
+    <button type="button" onclick="zoom(&#39;zoomIn&#39;);">Zoom In</button>
+    <button type="button" onclick="zoom(&#39;zoomOut&#39;);">Zoom Out</button>
+    
+    <div id="pointer0" class="pointer">1</div>
+    <div id="pointer1" class="pointer">2</div>
+    
+    <div id="zoomPos"></div>
 
-    <ul id="slide-out" class="side-nav">
-        <li class="head-container">
-            <div>
-                <span>
-                    <img src="images/d009b3de9c82d158ea90ec6e820a19d8bd3e42da.png">
-                </span>
-            </div>
-        </li>
-        <li><a href="#!">First Sidebar Link</a>
-        </li>
-        <li><a href="#!">Second Sidebar Link</a>
-        </li>
-    </ul>
-    <a data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-
-
-    <script src="js/jquery-1.11.3.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/page.js"></script>
+    <input type="text" id="text"/>
+    
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 
 </html>

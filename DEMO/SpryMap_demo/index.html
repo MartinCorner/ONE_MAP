@@ -25,9 +25,10 @@
             var offset_Top = 0;
             switch (zoomType) {
                 case "zoomIn":
+                    document.getElementById('worldMap').style.left = '-'+(zoomPos.x/2)*(mapWidth/100) + "px";
+                    document.getElementById('worldMap').style.top = '-'+(zoomPos.y/2)*(mapWidth/100) + "px";
                     mapWidth += 50;
-                    document.getElementById('worldMap').style.left = '-'+(zoomPos.x/2) + "px";
-                    document.getElementById('worldMap').style.top = '-'+(zoomPos.y/2) + "px";
+//                    console.log;
                 break;
                 case "zoomOut":
                     if (mapWidth > 100){
@@ -53,8 +54,8 @@
             
             zoomPos.x = (mousePos.x + clientPos.x)/2;
             zoomPos.y = (mousePos.y + clientPos.y)/2;
-            document.getElementById('pointer').style.left = zoomPos.x + "px";
-            document.getElementById('pointer').style.top = zoomPos.y + "px";
+            document.getElementById('pointer').style.left = mousePos.x + "px";
+            document.getElementById('pointer').style.top = mousePos.y + "px";
             
             
             mousePos.x -= getLeft(document.getElementById('worldMap'));

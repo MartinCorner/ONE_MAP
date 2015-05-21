@@ -104,13 +104,6 @@ function showPos(e){
         $('#pointer'+i)[0].style.left = touchPos.x;
         $('#pointer'+i)[0].style.top = touchPos.y;
     }
-//        var div = document.createElement('div');
-//    if(e.targetTouches[1]){
-//        var touchPos2 = mouseCoords(e.targetTouches[1]);
-//        $('#pointer2')[0].style.left = touchPos2.x;
-//        $('#pointer2')[0].style.top = touchPos2.y;
-//    }
-//    console.log(e.targetTouches);
 }
 
 function mouseCoords(ev) {
