@@ -13,15 +13,19 @@ footer {
 }
 
 a.button-collapse {
-  line-height: 122px;
   position: relative;
-  left: 50px;
+  left: 18px;
+  top: 18px;
   width: 48px;
   height: 48px;
   display: block;
 }
 a.button-collapse .mdi-navigation-menu {
     font-size: 32px;
+    /* display: block; */
+    width: 32px;
+    height: 32px;
+    padding: 8px;
 }
 
 .head-container{
@@ -56,8 +60,8 @@ a.button-collapse .mdi-navigation-menu {
     width: 56px;
     height: 56px;
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 8px;
+    right: 8px;
 }
 #floating-action-button h2 {
     padding: 14px;

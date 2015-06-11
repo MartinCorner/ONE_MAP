@@ -14,6 +14,8 @@
 		5BC028511B296942000E3516 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC028501B296942000E3516 /* Images.xcassets */; };
 		5BC028541B296942000E3516 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC028521B296942000E3516 /* LaunchScreen.xib */; };
 		5BC028601B296942000E3516 /* ONE_MAPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0285F1B296942000E3516 /* ONE_MAPTests.m */; };
+		5BC0286A1B296ADD000E3516 /* page in Resources */ = {isa = PBXBuildFile; fileRef = 5BC028691B296ADD000E3516 /* page */; };
+		5BC0286C1B296C82000E3516 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0286B1B296C82000E3516 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		5BC028591B296942000E3516 /* ONE MAPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ONE MAPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC0285E1B296942000E3516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC0285F1B296942000E3516 /* ONE_MAPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ONE_MAPTests.m; sourceTree = "<group>"; };
+		5BC028691B296ADD000E3516 /* page */ = {isa = PBXFileReference; lastKnownFileType = folder; path = page; sourceTree = SOURCE_ROOT; };
+		5BC0286B1B296C82000E3516 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = page/images/icon.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		5BC028421B296942000E3516 /* ONE MAP */ = {
 			isa = PBXGroup;
 			children = (
+				5BC028691B296ADD000E3516 /* page */,
 				5BC028471B296942000E3516 /* AppDelegate.h */,
 				5BC028481B296942000E3516 /* AppDelegate.m */,
 				5BC0284A1B296942000E3516 /* ViewController.h */,
@@ -96,6 +101,7 @@
 		5BC028431B296942000E3516 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5BC0286B1B296C82000E3516 /* icon.png */,
 				5BC028441B296942000E3516 /* Info.plist */,
 				5BC028451B296942000E3516 /* main.m */,
 			);
@@ -200,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC0284F1B296942000E3516 /* Main.storyboard in Resources */,
+				5BC0286C1B296C82000E3516 /* icon.png in Resources */,
+				5BC0286A1B296ADD000E3516 /* page in Resources */,
 				5BC028541B296942000E3516 /* LaunchScreen.xib in Resources */,
 				5BC028511B296942000E3516 /* Images.xcassets in Resources */,
 			);
@@ -299,9 +307,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9bd05251-f9dd-4653-bb6c-f552af121513";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,7 +333,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yibin Dong (5BS29M5D9G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yibin Dong (5BS29M5D9G)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -337,8 +347,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "9bd05251-f9dd-4653-bb6c-f552af121513";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
