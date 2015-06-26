@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    mainWebView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 0, 320, 480)];
+    
+    
+    NSURL* url = [[NSBundle bundleForClass: [self class]] URLForResource: @"index"
+                                                           withExtension: @"html"
+                                                            subdirectory: [@"page" stringByAppendingPathComponent: @"index"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.view addSubview: mainWebView];
+    [mainWebView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning {

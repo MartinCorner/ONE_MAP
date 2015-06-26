@@ -363,6 +363,7 @@
 				INFOPLIST_FILE = "ONE MAP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -373,6 +374,7 @@
 				INFOPLIST_FILE = "ONE MAP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -429,6 +431,7 @@
 				5BC028651B296942000E3516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BC028661B296942000E3516 /* Build configuration list for PBXNativeTarget "ONE MAPTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +440,7 @@
 				5BC028681B296942000E3516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
