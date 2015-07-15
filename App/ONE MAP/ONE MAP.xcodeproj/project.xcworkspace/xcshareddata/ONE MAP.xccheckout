@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8E42AAFE-25CC-4448-A8BD-56C2C2AB55E8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ONE MAP</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D7CAFE38BC03CCFF82CB627B52C3B8E5A51B3BB1</key>
+		<string>github.com:MartinCorner/ONE_MAP.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>App/ONE MAP/ONE MAP.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D7CAFE38BC03CCFF82CB627B52C3B8E5A51B3BB1</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:MartinCorner/ONE_MAP.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D7CAFE38BC03CCFF82CB627B52C3B8E5A51B3BB1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D7CAFE38BC03CCFF82CB627B52C3B8E5A51B3BB1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ONE_MAP</string>
+		</dict>
+	</array>
+</dict>
+</plist>

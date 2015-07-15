@@ -7,181 +7,138 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BC028461B296942000E3516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC028451B296942000E3516 /* main.m */; };
-		5BC028491B296942000E3516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC028481B296942000E3516 /* AppDelegate.m */; };
-		5BC0284C1B296942000E3516 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0284B1B296942000E3516 /* ViewController.m */; };
-		5BC0284F1B296942000E3516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0284D1B296942000E3516 /* Main.storyboard */; };
-		5BC028511B296942000E3516 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC028501B296942000E3516 /* Images.xcassets */; };
-		5BC028541B296942000E3516 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC028521B296942000E3516 /* LaunchScreen.xib */; };
-		5BC028601B296942000E3516 /* ONE_MAPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0285F1B296942000E3516 /* ONE_MAPTests.m */; };
-		5BC0286A1B296ADD000E3516 /* page in Resources */ = {isa = PBXBuildFile; fileRef = 5BC028691B296ADD000E3516 /* page */; };
-		5BC0286C1B296C82000E3516 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0286B1B296C82000E3516 /* icon.png */; };
+		472C56E3182B26C000026995 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472C56E2182B26C000026995 /* Foundation.framework */; };
+		472C56E5182B26C000026995 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472C56E4182B26C000026995 /* CoreGraphics.framework */; };
+		472C56E7182B26C000026995 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472C56E6182B26C000026995 /* UIKit.framework */; };
+		5BDA447D1B5643BF00E3C1D9 /* page in Resources */ = {isa = PBXBuildFile; fileRef = 5BDA447C1B5643BF00E3C1D9 /* page */; };
+		5BDA44861B564BDC00E3C1D9 /* VSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA44821B564BDC00E3C1D9 /* VSAppDelegate.m */; };
+		5BDA44871B564BDC00E3C1D9 /* VSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA44841B564BDC00E3C1D9 /* VSViewController.m */; };
+		5BDA448A1B564BF900E3C1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BDA44881B564BF900E3C1D9 /* Main.storyboard */; };
+		5BDA449A1B564D1300E3C1D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BDA44981B564D1300E3C1D9 /* InfoPlist.strings */; };
+		5BDA44A31B564D4800E3C1D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA44A01B564D4800E3C1D9 /* main.m */; };
+		5BDA44A41B564D4800E3C1D9 /* ONE MAP-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BDA44A11B564D4800E3C1D9 /* ONE MAP-Info.plist */; };
+		5BDA44A61B564D5C00E3C1D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDA44A51B564D5C00E3C1D9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5BC0285A1B296942000E3516 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5BC028381B296942000E3516 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BC0283F1B296942000E3516;
-			remoteInfo = "ONE MAP";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		5BC028401B296942000E3516 /* ONE MAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONE MAP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BC028441B296942000E3516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BC028451B296942000E3516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5BC028471B296942000E3516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5BC028481B296942000E3516 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5BC0284A1B296942000E3516 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5BC0284B1B296942000E3516 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5BC0284E1B296942000E3516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5BC028501B296942000E3516 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5BC028531B296942000E3516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5BC028591B296942000E3516 /* ONE MAPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ONE MAPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BC0285E1B296942000E3516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BC0285F1B296942000E3516 /* ONE_MAPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ONE_MAPTests.m; sourceTree = "<group>"; };
-		5BC028691B296ADD000E3516 /* page */ = {isa = PBXFileReference; lastKnownFileType = folder; path = page; sourceTree = SOURCE_ROOT; };
-		5BC0286B1B296C82000E3516 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = page/images/icon.png; sourceTree = SOURCE_ROOT; };
+		472C56DF182B26C000026995 /* ONE MAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONE MAP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		472C56E2182B26C000026995 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		472C56E4182B26C000026995 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		472C56E6182B26C000026995 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		472C5701182B26C000026995 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5BDA447C1B5643BF00E3C1D9 /* page */ = {isa = PBXFileReference; lastKnownFileType = folder; path = page; sourceTree = "<group>"; };
+		5BDA44811B564BDC00E3C1D9 /* VSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSAppDelegate.h; path = ONE_MAP/VSAppDelegate.h; sourceTree = "<group>"; };
+		5BDA44821B564BDC00E3C1D9 /* VSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VSAppDelegate.m; path = ONE_MAP/VSAppDelegate.m; sourceTree = "<group>"; };
+		5BDA44831B564BDC00E3C1D9 /* VSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSViewController.h; path = ONE_MAP/VSViewController.h; sourceTree = "<group>"; };
+		5BDA44841B564BDC00E3C1D9 /* VSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VSViewController.m; path = ONE_MAP/VSViewController.m; sourceTree = "<group>"; };
+		5BDA44891B564BF900E3C1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ONE_MAP/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BDA44991B564D1300E3C1D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ONE_MAP/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		5BDA44A01B564D4800E3C1D9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ONE_MAP/main.m; sourceTree = SOURCE_ROOT; };
+		5BDA44A11B564D4800E3C1D9 /* ONE MAP-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ONE MAP-Info.plist"; path = "ONE_MAP/ONE MAP-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5BDA44A21B564D4800E3C1D9 /* ONE MAP-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ONE MAP-Prefix.pch"; path = "ONE_MAP/ONE MAP-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		5BDA44A51B564D5C00E3C1D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ONE_MAP/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5BC0283D1B296942000E3516 /* Frameworks */ = {
+		472C56DC182B26C000026995 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BC028561B296942000E3516 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				472C56E5182B26C000026995 /* CoreGraphics.framework in Frameworks */,
+				472C56E7182B26C000026995 /* UIKit.framework in Frameworks */,
+				472C56E3182B26C000026995 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5BC028371B296942000E3516 = {
+		472C56D6182B26BF00026995 = {
 			isa = PBXGroup;
 			children = (
-				5BC028421B296942000E3516 /* ONE MAP */,
-				5BC0285C1B296942000E3516 /* ONE MAPTests */,
-				5BC028411B296942000E3516 /* Products */,
+				5BDA447F1B564B1900E3C1D9 /* ONE_MAP */,
+				5BDA447C1B5643BF00E3C1D9 /* page */,
+				472C56E1182B26C000026995 /* Frameworks */,
+				472C56E0182B26C000026995 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5BC028411B296942000E3516 /* Products */ = {
+		472C56E0182B26C000026995 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5BC028401B296942000E3516 /* ONE MAP.app */,
-				5BC028591B296942000E3516 /* ONE MAPTests.xctest */,
+				472C56DF182B26C000026995 /* ONE MAP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5BC028421B296942000E3516 /* ONE MAP */ = {
+		472C56E1182B26C000026995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5BC028691B296ADD000E3516 /* page */,
-				5BC028471B296942000E3516 /* AppDelegate.h */,
-				5BC028481B296942000E3516 /* AppDelegate.m */,
-				5BC0284A1B296942000E3516 /* ViewController.h */,
-				5BC0284B1B296942000E3516 /* ViewController.m */,
-				5BC0284D1B296942000E3516 /* Main.storyboard */,
-				5BC028501B296942000E3516 /* Images.xcassets */,
-				5BC028521B296942000E3516 /* LaunchScreen.xib */,
-				5BC028431B296942000E3516 /* Supporting Files */,
+				472C56E2182B26C000026995 /* Foundation.framework */,
+				472C56E4182B26C000026995 /* CoreGraphics.framework */,
+				472C56E6182B26C000026995 /* UIKit.framework */,
+				472C5701182B26C000026995 /* XCTest.framework */,
 			);
-			path = "ONE MAP";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5BC028431B296942000E3516 /* Supporting Files */ = {
+		472C56E9182B26C000026995 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5BC0286B1B296C82000E3516 /* icon.png */,
-				5BC028441B296942000E3516 /* Info.plist */,
-				5BC028451B296942000E3516 /* main.m */,
+				5BDA44A01B564D4800E3C1D9 /* main.m */,
+				5BDA44A11B564D4800E3C1D9 /* ONE MAP-Info.plist */,
+				5BDA44A21B564D4800E3C1D9 /* ONE MAP-Prefix.pch */,
+				5BDA44981B564D1300E3C1D9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			path = VeevaSimulator;
 			sourceTree = "<group>";
 		};
-		5BC0285C1B296942000E3516 /* ONE MAPTests */ = {
+		5BDA447F1B564B1900E3C1D9 /* ONE_MAP */ = {
 			isa = PBXGroup;
 			children = (
-				5BC0285F1B296942000E3516 /* ONE_MAPTests.m */,
-				5BC0285D1B296942000E3516 /* Supporting Files */,
+				5BDA44881B564BF900E3C1D9 /* Main.storyboard */,
+				5BDA44811B564BDC00E3C1D9 /* VSAppDelegate.h */,
+				5BDA44821B564BDC00E3C1D9 /* VSAppDelegate.m */,
+				5BDA44831B564BDC00E3C1D9 /* VSViewController.h */,
+				5BDA44841B564BDC00E3C1D9 /* VSViewController.m */,
+				5BDA44A51B564D5C00E3C1D9 /* Images.xcassets */,
+				472C56E9182B26C000026995 /* Supporting Files */,
 			);
-			path = "ONE MAPTests";
-			sourceTree = "<group>";
-		};
-		5BC0285D1B296942000E3516 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5BC0285E1B296942000E3516 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = ONE_MAP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5BC0283F1B296942000E3516 /* ONE MAP */ = {
+		472C56DE182B26C000026995 /* ONE MAP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BC028631B296942000E3516 /* Build configuration list for PBXNativeTarget "ONE MAP" */;
+			buildConfigurationList = 472C5711182B26C000026995 /* Build configuration list for PBXNativeTarget "ONE MAP" */;
 			buildPhases = (
-				5BC0283C1B296942000E3516 /* Sources */,
-				5BC0283D1B296942000E3516 /* Frameworks */,
-				5BC0283E1B296942000E3516 /* Resources */,
+				472C56DB182B26C000026995 /* Sources */,
+				472C56DC182B26C000026995 /* Frameworks */,
+				472C56DD182B26C000026995 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "ONE MAP";
-			productName = "ONE MAP";
-			productReference = 5BC028401B296942000E3516 /* ONE MAP.app */;
+			productName = VeevaSimulator;
+			productReference = 472C56DF182B26C000026995 /* ONE MAP.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5BC028581B296942000E3516 /* ONE MAPTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BC028661B296942000E3516 /* Build configuration list for PBXNativeTarget "ONE MAPTests" */;
-			buildPhases = (
-				5BC028551B296942000E3516 /* Sources */,
-				5BC028561B296942000E3516 /* Frameworks */,
-				5BC028571B296942000E3516 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5BC0285B1B296942000E3516 /* PBXTargetDependency */,
-			);
-			name = "ONE MAPTests";
-			productName = "ONE MAPTests";
-			productReference = 5BC028591B296942000E3516 /* ONE MAPTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5BC028381B296942000E3516 /* Project object */ = {
+		472C56D7182B26C000026995 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = martin;
-				TargetAttributes = {
-					5BC0283F1B296942000E3516 = {
-						CreatedOnToolsVersion = 6.3;
-					};
-					5BC028581B296942000E3516 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 5BC0283F1B296942000E3516;
-					};
-				};
+				CLASSPREFIX = VS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = EReach;
 			};
-			buildConfigurationList = 5BC0283B1B296942000E3516 /* Build configuration list for PBXProject "ONE MAP" */;
+			buildConfigurationList = 472C56DA182B26C000026995 /* Build configuration list for PBXProject "ONE MAP" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,92 +146,69 @@
 				en,
 				Base,
 			);
-			mainGroup = 5BC028371B296942000E3516;
-			productRefGroup = 5BC028411B296942000E3516 /* Products */;
+			mainGroup = 472C56D6182B26BF00026995;
+			productRefGroup = 472C56E0182B26C000026995 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BC0283F1B296942000E3516 /* ONE MAP */,
-				5BC028581B296942000E3516 /* ONE MAPTests */,
+				472C56DE182B26C000026995 /* ONE MAP */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5BC0283E1B296942000E3516 /* Resources */ = {
+		472C56DD182B26C000026995 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC0284F1B296942000E3516 /* Main.storyboard in Resources */,
-				5BC0286C1B296C82000E3516 /* icon.png in Resources */,
-				5BC0286A1B296ADD000E3516 /* page in Resources */,
-				5BC028541B296942000E3516 /* LaunchScreen.xib in Resources */,
-				5BC028511B296942000E3516 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BC028571B296942000E3516 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5BDA449A1B564D1300E3C1D9 /* InfoPlist.strings in Resources */,
+				5BDA44A41B564D4800E3C1D9 /* ONE MAP-Info.plist in Resources */,
+				5BDA44A61B564D5C00E3C1D9 /* Images.xcassets in Resources */,
+				5BDA447D1B5643BF00E3C1D9 /* page in Resources */,
+				5BDA448A1B564BF900E3C1D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5BC0283C1B296942000E3516 /* Sources */ = {
+		472C56DB182B26C000026995 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC0284C1B296942000E3516 /* ViewController.m in Sources */,
-				5BC028491B296942000E3516 /* AppDelegate.m in Sources */,
-				5BC028461B296942000E3516 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BC028551B296942000E3516 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BC028601B296942000E3516 /* ONE_MAPTests.m in Sources */,
+				5BDA44871B564BDC00E3C1D9 /* VSViewController.m in Sources */,
+				5BDA44A31B564D4800E3C1D9 /* main.m in Sources */,
+				5BDA44861B564BDC00E3C1D9 /* VSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		5BC0285B1B296942000E3516 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5BC0283F1B296942000E3516 /* ONE MAP */;
-			targetProxy = 5BC0285A1B296942000E3516 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		5BC0284D1B296942000E3516 /* Main.storyboard */ = {
+		5BDA44881B564BF900E3C1D9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5BC0284E1B296942000E3516 /* Base */,
+				5BDA44891B564BF900E3C1D9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5BC028521B296942000E3516 /* LaunchScreen.xib */ = {
+		5BDA44981B564D1300E3C1D9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5BC028531B296942000E3516 /* Base */,
+				5BDA44991B564D1300E3C1D9 /* en */,
 			);
-			name = LaunchScreen.xib;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5BC028611B296942000E3516 /* Debug */ = {
+		472C570F182B26C000026995 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -286,15 +220,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -304,22 +234,22 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "9bd05251-f9dd-4653-bb6c-f552af121513";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		5BC028621B296942000E3516 /* Release */ = {
+		472C5710182B26C000026995 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -331,118 +261,82 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yibin Dong (5BS29M5D9G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yibin Dong (5BS29M5D9G)";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PROVISIONING_PROFILE = "9bd05251-f9dd-4653-bb6c-f552af121513";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		5BC028641B296942000E3516 /* Debug */ = {
+		472C5712182B26C000026995 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "ONE MAP/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yibin Dong (5BS29M5D9G)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ONE_MAP/ONE MAP-Prefix.pch";
+				INFOPLIST_FILE = "ONE_MAP/ONE MAP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "ONE MAP";
+				PROVISIONING_PROFILE = "9bd05251-f9dd-4653-bb6c-f552af121513";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		5BC028651B296942000E3516 /* Release */ = {
+		472C5713182B26C000026995 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "ONE MAP/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		5BC028671B296942000E3516 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ONE MAPTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ONE MAP.app/ONE MAP";
-			};
-			name = Debug;
-		};
-		5BC028681B296942000E3516 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ONE MAPTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ONE MAP.app/ONE MAP";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yibin Dong (5BS29M5D9G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yibin Dong (5BS29M5D9G)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ONE_MAP/ONE MAP-Prefix.pch";
+				INFOPLIST_FILE = "ONE_MAP/ONE MAP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "ONE MAP";
+				PROVISIONING_PROFILE = "9bd05251-f9dd-4653-bb6c-f552af121513";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5BC0283B1B296942000E3516 /* Build configuration list for PBXProject "ONE MAP" */ = {
+		472C56DA182B26C000026995 /* Build configuration list for PBXProject "ONE MAP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BC028611B296942000E3516 /* Debug */,
-				5BC028621B296942000E3516 /* Release */,
+				472C570F182B26C000026995 /* Debug */,
+				472C5710182B26C000026995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BC028631B296942000E3516 /* Build configuration list for PBXNativeTarget "ONE MAP" */ = {
+		472C5711182B26C000026995 /* Build configuration list for PBXNativeTarget "ONE MAP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BC028641B296942000E3516 /* Debug */,
-				5BC028651B296942000E3516 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BC028661B296942000E3516 /* Build configuration list for PBXNativeTarget "ONE MAPTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BC028671B296942000E3516 /* Debug */,
-				5BC028681B296942000E3516 /* Release */,
+				472C5712182B26C000026995 /* Debug */,
+				472C5713182B26C000026995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5BC028381B296942000E3516 /* Project object */;
+	rootObject = 472C56D7182B26C000026995 /* Project object */;
 }
